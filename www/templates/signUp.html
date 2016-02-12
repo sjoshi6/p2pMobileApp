@@ -1,0 +1,27 @@
+<ion-view title="Sign up">
+    <ion-content overflow-scroll="true" padding="true" style="background: url(img/HKip40tHQFi1oTRYq1Yx_city-light-blur-wallpaper-background-2709-2855-hd-wallpapers-1.jpg) no-repeat center;" scroll="false" class="has-header">
+        <form class="list" name="signupForm">
+            <ion-list>
+                <label class="item item-input" name="emailL">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="xyz@gmail.com" name="email" ng-model="signup.email" required>
+                </label>
+                <label class="item item-input" name="passwordL">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="Min 6 characters" name="password" ng-model="signup.password" ng-minlength="6">
+                </label>
+                <label class="item item-input" name="cpasswordL">
+                    <span class="input-label">Confirm Password</span>
+                    <input type="password" placeholder="Min 6 characters" name="cpassword" ng-model="signup.cpassword" ng-minlength="6">
+                </label>
+                <label class="item item-input" name="admintokenL">
+                    <span class="input-label">Admin Token</span>
+                    <input type="password" name="admintoken" ng-model="signup.admintoken" required>
+                </label>
+            </ion-list>
+            <button class="button button-positive button-block  icon-left ion-android-contact" ng-disabled="signupForm.$invalid" ng-click="signupFn(signup)">Sign up</button>
+
+            <h4 class="header" style="color:white; text-align:center"> {{error_msg}} </h4>
+        </form>
+    </ion-content>
+</ion-view>
